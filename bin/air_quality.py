@@ -5,7 +5,7 @@ sensor=AM2315()
 
 while 1 == 1:
 #Set variables 
-    time = None
+    current_time = None
     temp = None
     rh = None
     pm = None
@@ -14,10 +14,12 @@ while 1 == 1:
     o3 = None
     co = None
 
-    time = time.time()
+    current_time = time.time()
     temp = sensor.temperature()
     rh = sensor.humidity()
 
-    print([time, temp, rh])
+    print([current_time, temp, rh])
+    time.sleep(5)
+
 
 exit()
