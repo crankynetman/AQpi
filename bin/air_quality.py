@@ -4,7 +4,7 @@ import time
 sensor=AM2315()
 
 while 1 == 1:
-#Set variables 
+#Set variables to None so that we don't have false data if there is an issuew with the sensor.
     current_time = None
     temp = None
     rh = None
