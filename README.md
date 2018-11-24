@@ -1,2 +1,2 @@
 # AQpi
-An Air Quality Monitoring Application for the Raspberry Pi
+A Python Air Quality Monitoring Application for the Raspberry Pi
