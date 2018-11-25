@@ -35,4 +35,5 @@ CREATE USER 'aqpi'@'localhost' IDENTIFIED BY 'password';
  PRIMARY KEY ( id ) 
  );
 ```
-
+* Copy config/aqpi_config.py.example to config/aqpi_config.py and replace 
+values with local DB config.
