@@ -8,7 +8,9 @@ CREATE USER 'aqpi'@'localhost' IDENTIFIED BY 'password';
 
 * Create database AQpi
 
+```sql
  CREATE DATABASE AQpi;
+```
 
 * Grant all priviledges on AQpi DB to aqpi user
 
