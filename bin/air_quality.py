@@ -26,7 +26,7 @@ sensor=AM2315()
 
 while 1 == 1:
     #Set variables to None so that we don't have false data if there is an issue with the sensor.
-    current_time = None
+    measurement_time = None
     temp = None
     rh = None
     pm2_5 = None
@@ -36,15 +36,15 @@ while 1 == 1:
     o3 = None
     co = None
 
-    current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+    measurement_time = time.strftime('%Y-%m-%d %H:%M:%S')
     temp = sensor.temperature()
     rh = sensor.humidity()
 
     cursor.execute(\
         "INSERT INTO air_quality (\
-            `current_time`, `temp`, `rh`, `pm2_5`, `pm10`, `so2`, `no2`, `o3`, `co`) \
+            `measurement_time`, `temp`, `rh`, `pm2_5`, `pm10`, `so2`, `no2`, `o3`, `co`) \
             VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)",\
-            (current_time, temp, rh, pm2_5, pm10, so2, no2, o3, co)\
+            (measurement_time, temp, rh, pm2_5, pm10, so2, no2, o3, co)\
         )
 
     time.sleep(5)
